@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 // next.js에 설정된 3000번 포트에서오는 건 cors설정 해제
-                .allowedOrigins("http://localhost:30000")
+//                .allowedOrigins("http://localhost:30000")
                 .allowedOrigins("") // Ingress설정으로 내부적으로 통신이 수행이되므로 CORS설정 없어도 통신가능
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS","FETCH");
     }
